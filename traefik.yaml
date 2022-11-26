@@ -10,11 +10,11 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: traefik
-      version: ">=7.1.0"
+      # version: ">=7.1.0"
+  interval: 30m0s
   # values:
   #   logging:
   #     enabled: true
-  interval: 30m0s
 
 
 # helm install traefik traefik/traefik --set
