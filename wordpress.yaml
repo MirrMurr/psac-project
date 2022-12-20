@@ -11,7 +11,8 @@ spec:
         kind: HelmRepository
         name: wordpress
         namespace: default
-  interval: 30m0s
+      version: ">=0.8.0"
+  interval: 5s
   values:
     wordpressUsername: admin
-    wordpressPassword: 1234
+    wordpressPassword: "1234"
