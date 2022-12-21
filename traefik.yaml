@@ -13,4 +13,21 @@ spec:
         namespace: default
   interval: 30m0s
 
-# helm install traefik traefik/traefik --set
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: Service
+metadata:
+  name: traefik
+spec:
+  ports:
+    - protocol: TCP
+      name: web
+      port: 8000
+    - protocol: TCP
+      name: admin
+      port: 8080
+    - protocol: TCP
+      name: websecure
+      port: 4443
+  selector:
+    app: traefik
